@@ -1,17 +1,17 @@
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Zap } from 'lucide-react';
-import { useState } from 'react';
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, Zap } from "lucide-react";
+import { useState } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Services', path: '/services' },
-    { name: 'About', path: '/about' },
-    { name: 'Case Studies', path: '/case-studies' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "Services", path: "/services" },
+    { name: "About", path: "/about" },
+    { name: "Case Studies", path: "/case-studies" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -34,8 +34,8 @@ export default function Header() {
                 to={link.path}
                 className={`text-sm font-medium transition-colors ${
                   isActive(link.path)
-                    ? 'text-[#0077b6]'
-                    : 'text-gray-600 hover:text-[#0096c7]'
+                    ? "text-[#0077b6]"
+                    : "text-gray-600 hover:text-[#0096c7]"
                 }`}
               >
                 {link.name}
@@ -53,7 +53,11 @@ export default function Header() {
             className="md:hidden text-gray-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -64,9 +68,7 @@ export default function Header() {
                 key={link.path}
                 to={link.path}
                 className={`block py-2 text-sm font-medium ${
-                  isActive(link.path)
-                    ? 'text-[#0077b6]'
-                    : 'text-gray-600'
+                  isActive(link.path) ? "text-[#0077b6]" : "text-gray-600"
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
