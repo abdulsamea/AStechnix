@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Bot, Zap, Target, TrendingUp, Users, CheckCircle2 } from 'lucide-react';
+import AnimatedBanner from '../components/AnimatedBanner';
 
 export default function Home() {
   const stats = [
@@ -42,42 +43,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="pt-16">
-      <section className="relative bg-gradient-to-br from-[#caf0f8] via-[#ade8f4] to-[#90e0ef] py-20 md:py-32 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-[#0077b6] rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-72 h-72 bg-[#00b4d8] rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-700"></div>
-        </div>
-
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-[#03045e] mb-6 leading-tight">
-              Transform Your Organization with
-              <span className="block bg-gradient-to-r from-[#0077b6] to-[#00b4d8] text-transparent bg-clip-text">
-                AI & Automation
-              </span>
-            </h1>
-            <p className="text-xl text-[#023e8a] mb-8 leading-relaxed">
-              We help NGOs, Governments, and Private Sectors eliminate bottlenecks, identify gaps, and automate repetitive tasks using cutting-edge AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-[#0077b6] to-[#00b4d8] text-white px-8 py-4 rounded-lg font-semibold hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-2 group"
-              >
-                <span>Start Your Transformation</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/services"
-                className="bg-white text-[#0077b6] px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all duration-300 border-2 border-[#0077b6]"
-              >
-                Explore Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+    <div>
+      <AnimatedBanner />
 
       <section className="py-16 bg-white">
         <div className="container mx-auto px-6">
