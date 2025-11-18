@@ -18,8 +18,8 @@ export default function AnimatedBanner() {
   ];
 
   return (
-    <div className="relative pt-16 overflow-hidden">
-      <section className="relative bg-gradient-to-br from-[#03045e] via-[#023e8a] to-[#0077b6] min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <div className="relative overflow-hidden">
+      <section className="relative bg-gradient-to-br from-[#03045e] via-[#023e8a] to-[#0077b6] min-h-screen flex flex-col items-center justify-center overflow-hidden pt-32">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 -left-96 w-96 h-96 bg-[#0096c7] rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse"></div>
           <div className="absolute bottom-1/4 -right-96 w-96 h-96 bg-[#48cae4] rounded-full mix-blend-screen filter blur-3xl opacity-20 animate-pulse delay-1000"></div>
@@ -81,7 +81,7 @@ export default function AnimatedBanner() {
             </div>
           </div>
 
-          <div className="mt-20 text-center">
+          <div className="mt-20 md:mt-32 pb-20 text-center">
             <div className="inline-block">
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#48cae4] to-[#90e0ef] rounded-full blur-2xl opacity-50 animate-pulse"></div>
